@@ -1,0 +1,67 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Essentials */
+.main-container {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+.main-content {
+  display: table-row;
+  height: 100%;
+}
+
+.main-content-body {
+  display: table-cell;
+}
+
+.site-wrapper {
+  display: table;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+  overflow: hidden;
+}
+
+.cover-container {
+  margin-right: auto;
+  margin-left: auto;
+}
+
+
+.main-header, .main-footer {
+  padding: 10px 10px;
+  background: #f7f7f7;
+}
+
+.main-transition-enter {
+  opacity: 0.01;
+}
+
+.main-transition-enter.main-transition-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.main-transition-leave {
+  opacity: 1;
+}
+
+.main-transition-leave.main-transition-leave-active {
+  opacity: 0.01;
+  transition: opacity 300ms ease-in;
+}
+
+.main-transition-appear {
+  opacity: 0.01;
+}
+
+.main-transition-appear.main-transition-appear-active {
+  opacity: 1;
+  transition: opacity .5s ease-in;
+}

@@ -1,0 +1,59 @@
+@import "node_modules/bootstrap/scss/bootstrap";
+@import "node_modules/font-awesome/scss/font-awesome";
+@import "main";
+@import "card";
+@import url(https://fonts.googleapis.com/css?family=Walter+Turncoat);
+
+///*
+// * Globals
+// */
+//
+///* Extra markup and styles for table-esque vertical and horizontal centering */
+//
+///* Padding for spacing */
+//.inner {
+//  padding: 2rem;
+//}
+//
+//@media (min-width: 48em) {
+//  .masthead-brand {
+//    float: left;
+//  }
+//  .nav-masthead {
+//    float: right;
+//  }
+//}
+//
+///*
+// * Affix and center
+// */
+//
+//@media (min-width: 40em) {
+//  /* Pull out the header and footer */
+//  .masthead {
+//    position: fixed;
+//    top: 0;
+//  }
+//  .mastfoot {
+//    position: fixed;
+//    bottom: 0;
+//  }
+//  /* Start the vertical centering */
+//  .site-wrapper-inner {
+//    vertical-align: middle;
+//  }
+//  /* Handle the widths */
+//  .masthead,
+//  .mastfoot,
+//  .cover-container {
+//    width: 100%; /* Must be percentage or pixels for horizontal alignment */
+//  }
+//}
+//
+//@media (min-width: 62em) {
+//  .masthead,
+//  .mastfoot,
+//  .cover-container {
+//    width: 42rem;
+//  }
+//}
