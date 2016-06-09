@@ -1,9 +1,8 @@
-.card-holder {
-  //background-color: grey;
-}
+$card-font-color: #f2ede3;
 
 .card-start {
   padding: 2px;
+  color: $card-font-color;
   position: absolute;
   top: 0px;
   left: 0px;
@@ -13,39 +12,65 @@
   -ms-perspective: 500;
   -o-perspective: 500;
   width: 100%;
-  transform-style: preserve-3d;
-  -webkit-transform-style: preserve-3d;
-  -moz-transform-style: preserve-3d;
-  -o-transform-style: preserve-3d;
   cursor: pointer;
-  /* Animate the transitions */
   -webkit-transition: 0.8s;
-  text-align: center;
   -moz-transition: 0.8s;
-  text-align: center;
   -ms-transition: 0.8s;
-  text-align: center;
   -o-transition: 0.8s;
-  text-align: center;
   transition: 0.8s;
-  text-align: center;
+
 }
 
 .card-content {
+  position: relative;
   width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
   overflow: hidden;
-  border-color: black;
-  border-width: 3px;
-  border-style: solid;
-  background: #bcbcbc;
-  padding: 10px;
+}
+
+.card-background-image {
+  z-index: -1;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+  top: 0px;
+  left: 0px;
+}
+
+.card-start .card-background-image {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease-in;
+  -moz-transition: opacity 0.4s ease-in;
+  -o-transition: opacity 0.4s ease-in;
+  -ms-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
+}
+
+
+.card-end .card-background-image {
+  opacity: 1;
+  -webkit-transition: opacity 0.4s ease-in;
+  -moz-transition: opacity 0.4s ease-in;
+  -o-transition: opacity 0.4s ease-in;
+  -ms-transition: opacity 0.4s ease-in;
+  transition: opacity 0.4s ease-in;
+}
+
+.card-interior {
+  width: 100%;
+  min-height: 100%;
+  padding-top: 15px;
+}
+
+.card-text {
+  border-top: 3px solid $card-font-color;
+  padding-top: 0.5em;
 
 }
 
-.card-start .card-text p, .card-start .card-text i {
+.card-start .card-interior-fade, .card-start .fa-fade {
   opacity: 0;
   -webkit-transition: opacity 0.4s ease-in;
   -moz-transition: opacity 0.4s ease-in;
@@ -54,7 +79,11 @@
   transition: opacity 0.4s ease-in;
 }
 
-.card-end .card-text p, .card-end .card-text i {
+.card-end .card-interior-fade {
+  opacity: 1;
+}
+
+.card-end .fa-fade {
   opacity: 1;
 }
 
@@ -72,45 +101,90 @@
 .card-end .card-content {
   overflow: scroll;
   cursor: default;
-  padding: 10px;
-
 }
 
 .card-close {
-  width: 30px;
-  height: 30px;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  margin: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+
+
+}
+
+.card-close .fa{
   cursor: pointer;
   font-size: 1.4em;
+
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+
+  z-index: 1;
 }
 
-.card-close:hover {
-  transform: scale(1.6);
+$card-close-scale: 1.4;
+
+.card-close .fa:hover {
+  -webkit-transform: scale( $card-close-scale );
+  -moz-transform: scale( $card-close-scale );
+  -o-transform: scale( $card-close-scale );
+  -ms-transform: scale( $card-close-scale );
+  transform: scale( $card-close-scale );
 }
 
-.card-holder h1 {
-  font-family: 'Walter Turncoat', cursive; /* WebKit (Safari/Chrome) Only */
-  -webkit-text-stroke: 1px black;
-
+.card-holder h3 {
+  padding: 10px 10px 10px 40px;
+  //background-color: #003459;
+  background-color: #EB7F00;
+  //color: #007EA7;
+  z-index: 999;
+  //-webkit-text-stroke: 1px #333;
   /* If we weren't using text-shadow, we'd set a fallback color
      and use this to set color instead
     -webkit-text-fill-color: white; */
-
-  color: white;
-
-  text-shadow: 3px 3px 0 #000,
-    /* Simulated effect for Firefox and Opera
-       and nice enhancement for WebKit */
-  -1px -1px 0 #000,
-  1px -1px 0 #000,
-  -1px 1px 0 #000,
-  1px 1px 0 #000;
+  //text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
 }
 
-.card-holder .fa-border {
-  border: solid 3px #000;
+$card-start-heading-transition-time: all .8s ease-in-out;
+  .card-start .cover-heading {
+    z-index: 999;
+
+    position: absolute;
+    top: 10px;
+    left: 0px;
+    //top: calc(100% - 70px);
+    -webkit-transition: $card-start-heading-transition-time;
+    -moz-transition: $card-start-heading-transition-time;
+    -o-transition: $card-start-heading-transition-time;
+    -ms-transition: $card-start-heading-transition-time;
+    transition: $card-start-heading-transition-time;
+    font-weight: bold; }
+
+$card-end-heading-transition-time: all .8s ease-in-out;
+.card-end .cover-heading {
+  z-index: 999;
+    top: 10px;
+    -webkit-transition: $card-end-heading-transition-time;
+    -moz-transition: $card-end-heading-transition-time;
+    -o-transition: $card-end-heading-transition-time;
+    -ms-transition: $card-end-heading-transition-time;
+    transition: $card-end-heading-transition-time;
+  }
+
+.main-card {
+  height: 100%;
+}
+
+.card-holder {
+
+}
+
+.main-card pre code {
+  display: block;
+  overflow-x: auto;
+  padding: 0.5em;
+  background: #333;
+  color: white;
 }

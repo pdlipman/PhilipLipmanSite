@@ -2,16 +2,18 @@
  * Created by philiplipman on 2/23/16.
  */
 
-const React = require('react');
-const ReactDOM = require('react-dom');
-const ReactCSSTransitionGroup = require('react-addons-css-transition-group');
+var React = require('react');
+var ReactDOM = require('react-dom');
+var ReactCSSTransitionGroup = require('react-addons-css-transition-group');
 
-const Router = require('react-router').Router;
-const Route = require('react-router').Route;
-const IndexRoute = require('react-router').IndexRoute;
+var Router = require('react-router').Router;
+var Route = require('react-router').Route;
+var IndexRoute = require('react-router').IndexRoute;
 
-const Card = require('./components/card/card.jsx');
-const GameMain = require('./components/game/game.jsx');
+var Deck = require('./components/card/deck.jsx');
+var cardContent = require('./components/card/card-content.json');
+
+var Card = require('./components/card/card.jsx');
 
 global.jQuery = require('jquery');
 
@@ -24,9 +26,7 @@ class App extends React.Component {
                     transitionAppear
                     transitionAppearTimeout={500}
                     transitionEnterTimeout={500}
-                    transitionLeaveTimeout={300}
-                >
-
+                    transitionLeaveTimeout={300}>
                     <div
                         className="cover-container">
                         {this.props.children}
@@ -38,15 +38,21 @@ class App extends React.Component {
     }
 }
 
-function Deck() {
+function Decks() {
     return (
         <div>
+            <Deck
+                items={cardContent}
+            />
             <div className="row">
                 <Card
-                    columnClass="col-sm-12"
+                    columnClass="col-lg-12"
+                    //heroImage="url(./app/assets/profile.jpg)"
+                    //heroImagePadding={400}
+                    title="About"
+                    backgroundColor="#1695A3"
                 >
                     <div>
-                        <h1 className="cover-heading">Cover your page.</h1>
                         <p className="lead">Cover is a one-page template for building simple and
                             beautiful
                             home
@@ -63,18 +69,40 @@ function Deck() {
                         </div>
                     </div>
                 </Card>
-            </div>
-            <div className="row">
                 <Card
-                    columnClass="col-sm-6"
+                    columnClass="col-lg-6"
                     height={440}
-                >
+                    heroImage="url(./app/assets/octopus.jpg)"
+                    heroImagePadding={200}
+                    title="Index"
+                    backgroundColor="#3498DB"
+                    hideContent={true}>
+                    <h4>Interior Crocidile aliagator, i drive a chevrolet movie theatre</h4>
                     <Index />
                 </Card>
                 <Card
-                    columnClass="col-sm-6"
+                    columnClass="col-lg-6"
                     height={440}
-                >
+                    title="Test"
+                    backgroundColor="#2980B9">
+                    <Index />
+
+                </Card>
+                <Card
+                    columnClass="col-lg-6"
+                    height={440}
+                    title="Test"
+                    backgroundColor="#E74C3C">
+                    <Index />
+
+                </Card>
+                <Card
+                    columnClass="col-lg-6"
+                    height={440}
+                    title="Test"
+                    backgroundColor="#2C3E50">
+                    <Index />
+
                 </Card>
             </div>
         </div>
@@ -84,7 +112,6 @@ function Deck() {
 function Index() {
     return (
         <div>
-            <h1>Index</h1>
             <p className="lead">Use this document as a way to quickly start any new project.<br />
                 I run a pretty tight ship around here. With a pool table.
                 It's a gaming ship. I know, I just call
@@ -132,7 +159,7 @@ function Index() {
     );
 }
 
-const Game = new React.createClass({
+var Game = new React.createClass({
     render: function () {
         return (
             <GameMain>
@@ -145,9 +172,9 @@ const Game = new React.createClass({
 ReactDOM.render((
     <Router>
         <Route path="/" component={App}>
-            <IndexRoute component={Deck}/>
+            <IndexRoute component={Decks}/>
             <Route path="game" component={Game}/>
-            <Route path="*" component={Deck}/>
+            <Route path="*" component={Decks}/>
         </Route>
     </Router>
 ), document.getElementById('content'));
