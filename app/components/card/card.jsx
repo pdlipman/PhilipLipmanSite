@@ -55,10 +55,7 @@ class Card extends React.Component {
 
     handleExpand() {
         if (!this.state.expand) {
-            var refCard = this.refs.card;
-            var node = ReactDOM.findDOMNode(refCard);
             var getScreenTop = jQuery(window).scrollTop();
-            console.log(getScreenTop);
             this.setState(
                 {
                     expand: true,
@@ -70,15 +67,8 @@ class Card extends React.Component {
 
     handleContract() {
         if (this.state.expand) {
-            var refCard = this.refs.card;
-            var node = ReactDOM.findDOMNode(refCard);
             var getScreenTop = this.state.screenTop;
-
             jQuery("html, body").animate({scrollTop: getScreenTop}, "slow");
-            //jQuery("html, body").animate({scrollTop: node.getBoundingClientRect().top}, "slow");
-            //jQuery(node).find('.card-content').animate({scrollTop: node.getBoundingClientRect().top}, "fast");
-            console.log(getScreenTop);
-            console.log(this.state.dy);
 
             this.setState(
                 {
@@ -90,7 +80,7 @@ class Card extends React.Component {
     render() {
 
         var titlePadding = (this.props.height < this.props.heroImagePadding || this.props.hideContent)
-            ? {paddingTop: '10'}
+            ? {paddingTop: '10px'}
             : {paddingTop: this.props.heroImagePadding};
         var cardHolderStyle = {
             height: this.props.height,
@@ -101,6 +91,9 @@ class Card extends React.Component {
         var classes = this.state.expand
             ? 'card-start card-end '// + this.state.columnClass
             : 'card-start ';// + this.state.columnClass;
+
+        var hoverHelper = (!this.state.expand && this.props.heroImagePadding > 20 && !this.props.hideContent) ? 'hover-helper-main-card' : '';
+
 
         var heroImage = this.props.heroImage ? this.props.heroImage : '';
 
@@ -119,6 +112,7 @@ class Card extends React.Component {
                 top: this.state.dy,
                 width: this.state.expandedWidth,
                 height: this.state.expandedHeight,
+                transition: '0.8s',
             };
 
             closeStyle = {};
@@ -144,14 +138,16 @@ class Card extends React.Component {
                                 backgroundColor: this.props.backgroundColor}}/>
 
                         <div
-                            className={"main-card"}
+                            className={"main-card " + hoverHelper}
                             style={{paddingTop: this.props.heroImagePadding}}>
                             <div
-                                className="cover-heading"
+                                className={"cover-heading " + hoverHelper}
                                 style={titlePadding}>
-                                <h3>
-                                    {this.props.title}
-                                </h3>
+                                <div>
+                                    <h3>
+                                        {this.props.title}
+                                    </h3>
+                                </div>
                             </div>
                             <div className={contentHideClass}
                                  style={{backgroundColor: this.props.backgroundColor}}>
@@ -164,9 +160,6 @@ class Card extends React.Component {
                                     <div className="card-text">
                                         {this.props.children}
                                     </div>
-                                    <p>
-                                        {JSON.stringify(this.state, null, 4)}
-                                    </p>
                                 </div>
                             </div>
                         </div>
@@ -208,7 +201,7 @@ Card.propTypes = {
 
 Card.defaultProps = {
     title: '',
-    backgroundColor: '#263248',
+    backgroundColor: '#2980B9',//2980B9
     heroImage: '',
     heroImagePadding: 0,
     columnClass: "col-sm-4",

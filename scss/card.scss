@@ -1,7 +1,9 @@
 $card-font-color: #f2ede3;
+$top-padding: 15px;
 
 .card-start {
-  padding: 2px;
+  //padding: 2px;
+  padding: 10px;
   color: $card-font-color;
   position: absolute;
   top: 0px;
@@ -13,21 +15,35 @@ $card-font-color: #f2ede3;
   -o-perspective: 500;
   width: 100%;
   cursor: pointer;
-  -webkit-transition: 0.8s;
-  -moz-transition: 0.8s;
-  -ms-transition: 0.8s;
-  -o-transition: 0.8s;
-  transition: 0.8s;
-
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 }
 
 .card-content {
+  -webkit-transition: box-shadow 0.4s;
+  -moz-transition: box-shadow 0.4s;
+  -ms-transition: box-shadow 0.4s;
+  -o-transition: box-shadow 0.4s;
+  transition: box-shadow 0.4s;
+  //box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: 2px solid lightgray;
   position: relative;
   width: 100%;
   height: 100%;
   top: 0px;
   left: 0px;
   overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+.card-content:hover {
+  //border: 2px solid grey;
+  box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 
 .card-background-image {
@@ -41,27 +57,48 @@ $card-font-color: #f2ede3;
 
 .card-start .card-background-image {
   opacity: 1;
-  -webkit-transition: opacity 0.4s ease-in;
-  -moz-transition: opacity 0.4s ease-in;
-  -o-transition: opacity 0.4s ease-in;
-  -ms-transition: opacity 0.4s ease-in;
-  transition: opacity 0.4s ease-in;
+  //-webkit-transition: opacity 0.4s ease-in;
+  //-moz-transition: opacity 0.4s ease-in;
+  //-o-transition: opacity 0.4s ease-in;
+  //-ms-transition: opacity 0.4s ease-in;
+  //transition: opacity 0.4s ease-in;
 }
-
 
 .card-end .card-background-image {
   opacity: 1;
-  -webkit-transition: opacity 0.4s ease-in;
-  -moz-transition: opacity 0.4s ease-in;
-  -o-transition: opacity 0.4s ease-in;
-  -ms-transition: opacity 0.4s ease-in;
-  transition: opacity 0.4s ease-in;
+  //-webkit-transition: opacity 0.4s ease-in;
+  //-moz-transition: opacity 0.4s ease-in;
+  //-o-transition: opacity 0.4s ease-in;
+  //-ms-transition: opacity 0.4s ease-in;
+  //transition: opacity 0.4s ease-in;
 }
 
 .card-interior {
   width: 100%;
   min-height: 100%;
-  padding-top: 15px;
+  padding-top: $top-padding;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+}
+
+.hover-helper-main-card, .hover-helper-main-card .cover-heading {
+  //-webkit-transition: 0.8s;
+  //-moz-transition: 0.8s;
+  //-ms-transition: 0.8s;
+  //-o-transition: 0.8s;
+  //transition: 0.8s;
+}
+
+.hover-helper-main-card:hover, .hover-helper-main-card:hover .cover-heading {
+  padding-top: 20px !important;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
 }
 
 .card-text {
@@ -93,33 +130,34 @@ $card-font-color: #f2ede3;
   left: 0;
   position: absolute;
   width: 100%;
-
-  //background-color: #FF5959;
+  -webkit-transition: 1s;
+  -moz-transition: 1s;
+  -ms-transition: 1s;
+  -o-transition: 1s;
+  transition: 1s;
 
 }
 
 .card-end .card-content {
-  overflow: scroll;
+  overflow-y: auto;
   cursor: default;
 }
 
 .card-close {
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: $top-padding 40px 0px 40px;
   text-align: right;
-
 
 }
 
-.card-close .fa{
+.card-close .fa {
   cursor: pointer;
-  font-size: 1.4em;
+  font-size: 1.75rem;
 
-  -webkit-transition: all .2s ease-in-out;
-  -moz-transition: all .2s ease-in-out;
-  -o-transition: all .2s ease-in-out;
-  -ms-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
+  //-webkit-transition: all .2s ease-in-out;
+  //-moz-transition: all .2s ease-in-out;
+  //-o-transition: all .2s ease-in-out;
+  //-ms-transition: all .2s ease-in-out;
+  //transition: all .2s ease-in-out;
 
   z-index: 1;
 }
@@ -127,58 +165,66 @@ $card-font-color: #f2ede3;
 $card-close-scale: 1.4;
 
 .card-close .fa:hover {
-  -webkit-transform: scale( $card-close-scale );
-  -moz-transform: scale( $card-close-scale );
-  -o-transform: scale( $card-close-scale );
-  -ms-transform: scale( $card-close-scale );
-  transform: scale( $card-close-scale );
+  -webkit-transform: scale($card-close-scale);
+  -moz-transform: scale($card-close-scale);
+  -o-transform: scale($card-close-scale);
+  -ms-transform: scale($card-close-scale);
+  transform: scale($card-close-scale);
+}
+
+.cover-heading div {
+  padding: $top-padding 10px 10px 40px;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
 }
 
 .card-holder h3 {
-  padding: 10px 10px 10px 40px;
-  //background-color: #003459;
-  background-color: #EB7F00;
-  //color: #007EA7;
-  z-index: 999;
-  //-webkit-text-stroke: 1px #333;
-  /* If we weren't using text-shadow, we'd set a fallback color
-     and use this to set color instead
-    -webkit-text-fill-color: white; */
-  //text-shadow: 3px 3px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; }
+  opacity: 1.0;
+}
+
+.card-holder h3 .fa {
+  background-color: transparent;
 }
 
 $card-start-heading-transition-time: all .8s ease-in-out;
-  .card-start .cover-heading {
-    z-index: 999;
+.card-start .cover-heading {
+  z-index: 999;
 
-    position: absolute;
-    top: 10px;
-    left: 0px;
-    //top: calc(100% - 70px);
-    -webkit-transition: $card-start-heading-transition-time;
-    -moz-transition: $card-start-heading-transition-time;
-    -o-transition: $card-start-heading-transition-time;
-    -ms-transition: $card-start-heading-transition-time;
-    transition: $card-start-heading-transition-time;
-    font-weight: bold; }
+  position: absolute;
+  top: 10px;
+  left: 0px;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+
+  font-weight: bold;
+}
 
 $card-end-heading-transition-time: all .8s ease-in-out;
 .card-end .cover-heading {
   z-index: 999;
-    top: 10px;
-    -webkit-transition: $card-end-heading-transition-time;
-    -moz-transition: $card-end-heading-transition-time;
-    -o-transition: $card-end-heading-transition-time;
-    -ms-transition: $card-end-heading-transition-time;
-    transition: $card-end-heading-transition-time;
-  }
+  top: 10px;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+
+}
 
 .main-card {
   height: 100%;
+  -webkit-transition: 0.8s;
+  -moz-transition: 0.8s;
+  -ms-transition: 0.8s;
+  -o-transition: 0.8s;
+  transition: 0.8s;
+
 }
 
 .card-holder {
-
 }
 
 .main-card pre code {

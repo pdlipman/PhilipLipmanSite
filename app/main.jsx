@@ -11,7 +11,7 @@ var Route = require('react-router').Route;
 var IndexRoute = require('react-router').IndexRoute;
 
 var Deck = require('./components/card/deck.jsx');
-var cardContent = require('./components/card/card-content.json');
+var cardContent = require('./assets/content/card-content.json');
 
 var Card = require('./components/card/card.jsx');
 
@@ -44,67 +44,7 @@ function Decks() {
             <Deck
                 items={cardContent}
             />
-            <div className="row">
-                <Card
-                    columnClass="col-lg-12"
-                    //heroImage="url(./app/assets/profile.jpg)"
-                    //heroImagePadding={400}
-                    title="About"
-                    backgroundColor="#1695A3"
-                >
-                    <div>
-                        <p className="lead">Cover is a one-page template for building simple and
-                            beautiful
-                            home
-                            pages. Download,
-                            edit the text, and add your own fullscreen
-                            background photo to make it your
-                            own.
-                        </p>
-                        <p className="lead">
-                            <a href="#" className="btn btn-lg btn-secondary">Learn more</a>
-                        </p>
-                        <div className="container">
-                            Card 0
-                        </div>
-                    </div>
-                </Card>
-                <Card
-                    columnClass="col-lg-6"
-                    height={440}
-                    heroImage="url(./app/assets/octopus.jpg)"
-                    heroImagePadding={200}
-                    title="Index"
-                    backgroundColor="#3498DB"
-                    hideContent={true}>
-                    <h4>Interior Crocidile aliagator, i drive a chevrolet movie theatre</h4>
-                    <Index />
-                </Card>
-                <Card
-                    columnClass="col-lg-6"
-                    height={440}
-                    title="Test"
-                    backgroundColor="#2980B9">
-                    <Index />
 
-                </Card>
-                <Card
-                    columnClass="col-lg-6"
-                    height={440}
-                    title="Test"
-                    backgroundColor="#E74C3C">
-                    <Index />
-
-                </Card>
-                <Card
-                    columnClass="col-lg-6"
-                    height={440}
-                    title="Test"
-                    backgroundColor="#2C3E50">
-                    <Index />
-
-                </Card>
-            </div>
         </div>
     );
 }
