@@ -29,6 +29,7 @@ class Deck extends React.Component {
                     key={card.key}
                     title={card.title}
                     backgroundColor={card.backgroundColor}
+                    backgroundSize={card.backgroundSize}
                     columnClass={card.columnClass}
                     height={card.height}
                     heroImage={card.heroImage}

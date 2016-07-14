@@ -113,7 +113,6 @@ ReactDOM.render((
     <Router>
         <Route path="/" component={App}>
             <IndexRoute component={Decks}/>
-            <Route path="game" component={Game}/>
             <Route path="*" component={Decks}/>
         </Route>
     </Router>

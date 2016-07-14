@@ -8,11 +8,11 @@ $top-padding: 15px;
   position: absolute;
   top: 0px;
   left: 0px;
-  perspective: 500;
-  -webkit-perspective: 500;
-  -moz-perspective: 500;
-  -ms-perspective: 500;
-  -o-perspective: 500;
+  perspective: 500px;
+  -webkit-perspective: 500px;
+  -moz-perspective: 500px;
+  -ms-perspective: 500px;
+  -o-perspective: 500px;
   width: 100%;
   cursor: pointer;
   -webkit-transition: 1s;
@@ -23,11 +23,11 @@ $top-padding: 15px;
 }
 
 .card-content {
-  -webkit-transition: box-shadow 0.4s;
-  -moz-transition: box-shadow 0.4s;
-  -ms-transition: box-shadow 0.4s;
-  -o-transition: box-shadow 0.4s;
-  transition: box-shadow 0.4s;
+  -webkit-transition: 0.4s;
+  -moz-transition: 0.4s;
+  -ms-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
   //box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border: 2px solid lightgray;
   position: relative;
@@ -41,7 +41,7 @@ $top-padding: 15px;
 }
 
 .card-content:hover {
-  //border: 2px solid grey;
+  border: 2px solid #adadadkhk;
   box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
@@ -139,7 +139,7 @@ $top-padding: 15px;
 }
 
 .card-end .card-content {
-  overflow-y: auto;
+  overflow-y: hidden;
   cursor: default;
 }
 
@@ -149,20 +149,21 @@ $top-padding: 15px;
 
 }
 
+$card-close-scale: 1.4;
+
 .card-close .fa {
   cursor: pointer;
   font-size: 1.75rem;
 
-  //-webkit-transition: all .2s ease-in-out;
-  //-moz-transition: all .2s ease-in-out;
-  //-o-transition: all .2s ease-in-out;
-  //-ms-transition: all .2s ease-in-out;
-  //transition: all .2s ease-in-out;
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 
   z-index: 1;
 }
 
-$card-close-scale: 1.4;
 
 .card-close .fa:hover {
   -webkit-transform: scale($card-close-scale);
@@ -233,4 +234,13 @@ $card-end-heading-transition-time: all .8s ease-in-out;
   padding: 0.5em;
   background: #333;
   color: white;
+}
+
+$btn-transition: 0.25s;
+.btn {
+  -webkit-transition: $btn-transition;
+  -moz-transition: $btn-transition;
+  -ms-transition: $btn-transition;
+  -o-transition: $btn-transition;
+  transition: $btn-transition;
 }

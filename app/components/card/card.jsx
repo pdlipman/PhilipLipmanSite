@@ -7,6 +7,7 @@ class Card extends React.Component {
         this.state = {
             title: props.title,
             backgroundColor: props.backgroundColor,
+            backgroundSize: props.backgroundSize,
             heroImage: props.heroImage,
             heroImagePadding: props.heroImagePadding,
             columnClass: props.columnClass,
@@ -134,8 +135,10 @@ class Card extends React.Component {
                             style={{
                                 backgroundImage: heroImage,
                                 backgroundRepeat: "no-repeat",
-                                backgroundSize: "100%",
-                                backgroundColor: this.props.backgroundColor}}/>
+                                backgroundSize: this.props.backgroundSize,
+                                backgroundColor: this.props.backgroundColor}}>
+
+                        </div>
 
                         <div
                             className={"main-card " + hoverHelper}
@@ -171,21 +174,10 @@ class Card extends React.Component {
     }
 }
 
-//title: props.title,
-//    backgroundColor: props.backgroundColor,
-//    heroImage: props.heroImage,
-//    heroImagePadding: props.heroImagePadding,
-//    columnClass: props.columnClass,
-//    height: props.height,
-//    expand: props.expand,
-//    dx: props.dx,
-//    dy: props.dy,
-//    expandedWidth: props.expandedWidth,
-//    expandedHeight: props.expandedHeight,
-
 Card.propTypes = {
     title: React.PropTypes.string,
     backgroundColor: React.PropTypes.string,
+    backgroundSize: React.PropTypes.string,
     heroImage: React.PropTypes.string,
     heroImagePadding: React.PropTypes.number,
     columnClass: React.PropTypes.string,
@@ -202,6 +194,7 @@ Card.propTypes = {
 Card.defaultProps = {
     title: '',
     backgroundColor: '#2980B9',//2980B9
+    backgroundSize: 'cover',
     heroImage: '',
     heroImagePadding: 0,
     columnClass: "col-sm-4",
