@@ -7,17 +7,18 @@ http://pdlipman.github.io<br/>
 #### Skills
 - Java, Javascript, MySql
 - React, Spring, Camel, jQuery, CSS, Sass, HTML, JSON, MongoDB, Solr, XML 
-- IntelliJ, Maven, Tomcat
+- IntelliJ, Maven, Tomcat, Git
 - Web Application Development, Data Management, Messaging, Batch Processing
 - Agile, Scrum
 #### Work Experience
 ##### Software Developer
 ###### [Dealer.com](http://www.dealer.com/), June 2014 - present
-- Developed inventory monitoring tooling that allows web developers to quickly 
-monitor inventory across all development and production environments ensuring 
-accurate data.
+- Developed monitoring tools that allows web developers to quickly 
+monitor inventory across all development and production environments, ensuring 
+accurate data when testing changes.
 - Developed batch service to retrieve and process payment and leasing financial
-data enabling across all car dealership inventory on all sites.
+data across all car dealership inventory, allowing customers to
+estimate accurate payments and driving loan qualification.
 - Coordinated with project managers and technical leads to design and implement
 a customizable tabbed slideshow widget for a major auto group.
 ##### Software Developer
@@ -25,7 +26,7 @@ a customizable tabbed slideshow widget for a major auto group.
 - Developed AuctionWorx and rwAuction Pro online auction software as part of a 
 three person team using the Microsoft .NET stack.
 - Worked with clients to create technical specifications, cost analysis, and 
-time estimates to accomplish their technical and design goals.
+time estimates in order to accomplish technical and design goals.
 - Designed and implemented buyers premium, flat, and consignment fee 
 calculation and invoicing systems to help clients track and charge buyers and 
 sellers on their auction sites.
