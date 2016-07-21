@@ -11,16 +11,17 @@ class MarkdownPage extends React.Component {
     }
 
     loadMarkdownFromServer() {
-        if(this.props.url) {
+        var that = this;
+        if(that.props.url) {
             jQuery.ajax({
                 'type': 'GET',
-                'url': this.props.url,
+                'url': that.props.url,
                 'async': false,
-                'success': (data) => {
-                    this.setState({data: data});
+                'success': function (data) {
+                    that.setState({data: data});
                 },
-                'error': (xhr, status, err) => {
-                    console.error(this.props.url, status, err.toString());
+                'error': function (xhr, status, err) {
+                    console.error(that.props.url, status, err.toString());
                 }
             });
         }
