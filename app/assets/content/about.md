@@ -8,34 +8,8 @@
 I like to program in Java and Javascript. I like to draw. I am a friend to all dogs :)
 <br />Click on this or any other panel for more info.
 
-``` js
-var foo = function (bar) {
-  return bar++;
-};
-
-console.log(foo(5));
-```  
-
-<!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
-<button type="button" class="btn btn-primary">Primary</button>
-
-<!-- Secondary, outline button -->
-<button type="button" class="btn btn-secondary">Secondary</button>
-
-<!-- Indicates a successful or positive action -->
-<button type="button" class="btn btn-success">Success</button>
-
-<!-- Contextual button for informational alert messages -->
-<button type="button" class="btn btn-info">Info</button>
-
-<!-- Indicates caution should be taken with this action -->
-<button type="button" class="btn btn-warning">Warning</button>
-
-<!-- Indicates a dangerous or potentially negative action -->
-<button type="button" class="btn btn-danger">Danger</button>
-
-<!-- Deemphasize a button by making it look like a link while maintaining button behavior -->
-<button type="button" class="btn btn-link">Link</button>
+<a class="resume-link" href="./#/resume"><i class="fa fa-file fa-hover-helper fa-resume"></i><span class="resume-link-text">Online Resume</span></a> <br/>
+<a class="resume-link" href="./app/assets/content/PhilipLipmanResume.pdf"><i class="fa fa-file-pdf-o fa-hover-helper fa-resume"></i><span class="resume-link-text">PDF Resume</span></a> <br/>
 
 </div>
 </div>

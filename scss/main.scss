@@ -47,9 +47,43 @@ html, body {
 .footer-content {
   padding: 20px 0px;
 }
+
 .footer-content .fa {
-  font-size: 1.5em;
   padding-right: 20px;
+}
+
+a:hover {
+  &.resume-link {
+    text-decoration: none;
+  }
+  &.footer-content {
+    text-decoration: none;
+  }
+}
+
+.resume-link {
+  font-size: 1.5em;
+  color: #f2ede3;
+}
+
+.resume-link-text {
+  -webkit-transition: all .2s ease-in-out;
+  -moz-transition: all .2s ease-in-out;
+  -o-transition: all .2s ease-in-out;
+  -ms-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.fa-resume {
+  padding: 20px;
+}
+
+.footer-content a{
+    color: #f2ede3;
+}
+
+.footer-content .fa, .fa-hover-helper {
+  font-size: 1.5em;
 
   -webkit-transition: all .2s ease-in-out;
   -moz-transition: all .2s ease-in-out;
@@ -58,12 +92,14 @@ html, body {
   transition: all .2s ease-in-out;
 }
 
-.main-footer .fa:hover {
+.main-footer .fa:hover, .fa-hover-helper:hover, a:hover .fa-hover-helper{
   -webkit-transform: scale(1.4);
   -moz-transform: scale(1.4);
   -o-transform: scale(1.4);
   -ms-transform: scale(1.4);
   transform: scale(1.4);
+  text-decoration: none;
+
 }
 
 .bottom-footer {

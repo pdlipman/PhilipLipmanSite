@@ -1,21 +1,29 @@
-# Philip Lipman 
-philip.lipman@gmail.com<br/>
+## Philip Lipman 
+[(PDF)](./app/assets/content/PhilipLipmanResume.pdf)<br/>
+pdlipman@yahoo.com<br/>
 802.558.2844<br/>
 http://pdlipman.github.io<br/>
 
-### Skills
-- Java, Javascript, SQL 
-- Web Application Development 
-- Data Management, Messaging, Batch Processing
-
-### Work Experience
-#### Software Developer
-##### [Dealer.com](http://www.dealer.com/), June 2014 - present
-- Designed and implemented customizable tabbed slideshow widget 
-#### Software Developer
-##### [Rainworx Software](http://www.rainworx.com/), September 2006 - June 2014
+#### Skills
+- Java, Javascript, MySql
+- React, Spring, Camel, jQuery, CSS, Sass, HTML, JSON, MongoDB, Solr, XML 
+- IntelliJ, Maven, Tomcat
+- Web Application Development, Data Management, Messaging, Batch Processing
+- Agile, Scrum
+#### Work Experience
+##### Software Developer
+###### [Dealer.com](http://www.dealer.com/), June 2014 - present
+- Developed inventory monitoring tooling that allows web developers to quickly 
+monitor inventory across all development and production environments ensuring 
+accurate data.
+- Developed batch service to retrieve and process payment and leasing financial
+data enabling across all car dealership inventory on all sites.
+- Coordinated with project managers and technical leads to design and implement
+a customizable tabbed slideshow widget for a major auto group.
+##### Software Developer
+###### [Rainworx Software](http://www.rainworx.com/), September 2006 - June 2014
 - Developed AuctionWorx and rwAuction Pro online auction software as part of a 
-three person team.
+three person team using the Microsoft .NET stack.
 - Worked with clients to create technical specifications, cost analysis, and 
 time estimates to accomplish their technical and design goals.
 - Designed and implemented buyers premium, flat, and consignment fee 
@@ -26,9 +34,6 @@ bids and time left, updating the buyer dashboard and optionally sending email
 notifications.
 - Designed and implemented real time pricing system using a comet server to push
  updates to subscribers.
-- Improved admin dashboard custom report creation, reducing new 
-report development time by 75%. The new reports only required a custom SQL 
-query. A template was used to display and sort the information. 
-### Buzzwords
-Java, Javascript, Spring, Apache Camel, React, Maven, Node, MySql, MongoDB, 
-Apache Solr, JQuery, HTML, CSS, Sass, JSON, XML, Agile
+#### Education
+###### Bachelor of Science (B.S.), Software Engineering
+Vermont Technical College - Randolph, VT

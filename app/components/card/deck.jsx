@@ -1,7 +1,7 @@
 var React = require('react');
 var Markdown = require('react-remarkable');
 var hljs = require('highlight.js') // https://highlightjs.org/
-var Card = require('./card.jsx');
+var Card = require('./Card.jsx');
 
 class Deck extends React.Component {
     constructor(props) {
