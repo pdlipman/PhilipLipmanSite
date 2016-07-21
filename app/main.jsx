@@ -18,6 +18,7 @@ var cardContent = require('./assets/content/card-content.json');
 var MarkdownPage = require('./components/markdownpage/MarkdownPage.jsx');
 
 var resumeMarkdown = './app/assets/content/resume.md';
+var reactCardMarkdown = './app/assets/content/react-cards.md';
 
 global.jQuery = require('jquery');
 
@@ -55,12 +56,23 @@ function Decks() {
 
 class ResumePage extends React.Component {
     render() {
-        console.log(resumeMarkdown);
-
         return (
             <div className="container">
                 <MarkdownPage
                     url={resumeMarkdown}>
+
+                </MarkdownPage>
+            </div>
+        );
+    }
+}
+
+class ReactCardsPage extends React.Component {
+    render() {
+        return (
+            <div className="container">
+                <MarkdownPage
+                    url={reactCardMarkdown}>
 
                 </MarkdownPage>
             </div>
@@ -83,6 +95,7 @@ ReactDOM.render((
         <Route path="/" component={App}>
             <IndexRoute component={Decks}/>
             <Route path="resume" component={ResumePage}/>
+            <Route path="react-cards" component={ReactCardsPage}/>
             <Route path="*" component={Decks}/>
         </Route>
     </Router>
