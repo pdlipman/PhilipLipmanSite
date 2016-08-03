@@ -43,17 +43,6 @@ class App extends React.Component {
     }
 }
 
-function Decks() {
-    return (
-        <div>
-            <Deck
-                items={cardContent}
-            />
-
-        </div>
-    );
-}
-
 class ResumePage extends React.Component {
     render() {
         return (
@@ -90,13 +79,22 @@ var Game = new React.createClass({
     }
 });
 
+var wrapComponent = function(Component, props) {
+    console.log(props);
+    return React.createClass({
+        render: function() {
+            return React.createElement(Component, props);
+        }
+    });
+};
+
 ReactDOM.render((
     <Router history={hashHistory}>
         <Route path="/" component={App}>
-            <IndexRoute component={Decks}/>
+            <IndexRoute component={wrapComponent(Deck, {items: cardContent})}/>
             <Route path="resume" component={ResumePage}/>
             <Route path="react-cards" component={ReactCardsPage}/>
-            <Route path="*" component={Decks}/>
+            <Route path="*" component={Deck}/>
         </Route>
     </Router>
 ), document.getElementById('content'));

@@ -1,5 +1,7 @@
+<div class="page-content">
+
 ## Philip Lipman 
-[(PDF)](./app/assets/content/PhilipLipmanResume.pdf)<br/>
+<a class="resume-link" href="./app/assets/content/PhilipLipmanResume.pdf"><i class="fa fa-file-pdf-o fa-hover-helper fa-resume"></i><span class="resume-link-text">PDF</span></a> <br/>
 pdlipman@yahoo.com<br/>
 802.558.2844<br/>
 http://pdlipman.github.io<br/>
@@ -12,7 +14,7 @@ http://pdlipman.github.io<br/>
 - Agile, Scrum
 #### Work Experience
 ##### Software Developer
-###### [Dealer.com](http://www.dealer.com/), June 2014 - present
+###### <a class="resume-link resume-link-2" href="http://www.dealer.com/"><span class="resume-link-text">Dealer.com</span></a>, June 2014 - present
 - Developed monitoring tools that allows web developers to quickly 
 monitor inventory across all development and production environments, ensuring 
 accurate data when testing changes.
@@ -22,7 +24,7 @@ estimate accurate payments and driving loan qualification.
 - Coordinated with project managers and technical leads to design and implement
 a customizable tabbed slideshow widget for a major auto group.
 ##### Software Developer
-###### [Rainworx Software](http://www.rainworx.com/), September 2006 - June 2014
+###### <a class="resume-link resume-link-2" href="http://www.rainworx.com/"><span class="resume-link-text">Rainworx Software</span></a>, September 2006 - June 2014
 - Developed AuctionWorx and rwAuction Pro online auction software as part of a 
 three person team using the Microsoft .NET stack.
 - Worked with clients to create technical specifications, cost analysis, and 
@@ -38,3 +40,4 @@ notifications.
 #### Education
 ###### Bachelor of Science (B.S.), Software Engineering
 Vermont Technical College - Randolph, VT
+</div>

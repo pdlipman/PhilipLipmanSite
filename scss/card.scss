@@ -45,33 +45,6 @@ $top-padding: 15px;
   //box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.card-background-image {
-  z-index: -1;
-  position: absolute;
-  width: inherit;
-  height: inherit;
-  top: 0px;
-  left: 0px;
-}
-
-.card-start .card-background-image {
-  opacity: 1;
-  //-webkit-transition: opacity 0.4s ease-in;
-  //-moz-transition: opacity 0.4s ease-in;
-  //-o-transition: opacity 0.4s ease-in;
-  //-ms-transition: opacity 0.4s ease-in;
-  //transition: opacity 0.4s ease-in;
-}
-
-.card-end .card-background-image {
-  opacity: 1;
-  //-webkit-transition: opacity 0.4s ease-in;
-  //-moz-transition: opacity 0.4s ease-in;
-  //-o-transition: opacity 0.4s ease-in;
-  //-ms-transition: opacity 0.4s ease-in;
-  //transition: opacity 0.4s ease-in;
-}
-
 .card-interior {
   width: 100%;
   min-height: 100%;
@@ -143,7 +116,7 @@ $top-padding: 15px;
 }
 
 .card-end .card-content {
-  overflow-y: hidden;
+  overflow-y: auto;
   cursor: default;
 }
 

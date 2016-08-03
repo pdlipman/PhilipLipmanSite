@@ -8,10 +8,21 @@ class Deck extends React.Component {
         super(props);
         this.state = {
             items: props.items,
+            activeCardItemKey: props.activeCardItemKey,
         }
+        this.setActiveCardItem = this.setActiveCardItem.bind(this);
+
+    }
+
+    setActiveCardItem(key) {
+        this.setState({
+            activeCardItemKey: key,
+        });
+        console.log(key);
     }
 
     render() {
+        var currentActiveCardItemKey = this.state.activeCardItemKey;
         var cards = this.props.items.map(function (card) {
             var content = '';
             if (card.content) {
@@ -27,6 +38,7 @@ class Deck extends React.Component {
             return (
                 <Card
                     key={card.key}
+                    id={card.key}
                     title={card.title}
                     backgroundColor={card.backgroundColor}
                     backgroundSize={card.backgroundSize}
@@ -35,6 +47,8 @@ class Deck extends React.Component {
                     heroImage={card.heroImage}
                     heroImagePadding={card.heroImagePadding}
                     hideContent={card.hideContent}
+                    active={currentActiveCardItemKey === card.key}
+                    activeFunction={this.setActiveCardItem}
                 >
                     <Markdown
                         options={{
@@ -72,6 +86,8 @@ class Deck extends React.Component {
 
 Deck.propTypes = {};
 
-Deck.defaultProps = {};
+Deck.defaultProps = {
+    activeCardItemKey: -1,
+};
 
 module.exports = Deck;

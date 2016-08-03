@@ -8,7 +8,6 @@
 I like to program in Java and Javascript. I like to draw. I am a friend to all dogs :)
 <br />Click on this or any other panel for more info.
 
-<a class="resume-link" href="./#/resume"><i class="fa fa-file fa-hover-helper fa-resume"></i><span class="resume-link-text">Online Resume</span></a> <br/>
 <a class="resume-link" href="./app/assets/content/PhilipLipmanResume.pdf"><i class="fa fa-file-pdf-o fa-hover-helper fa-resume"></i><span class="resume-link-text">PDF Resume</span></a> <br/>
 
 </div>

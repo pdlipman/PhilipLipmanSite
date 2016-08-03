@@ -19,6 +19,9 @@ class Card extends React.Component {
             expandedHeight: props.expandedHeight,
             hideContent: props.hideContent,
             screenTop: props.screenTop,
+            activeFunction: props.activeFunction,
+            active: props.active,
+            id: props.id,
         };
 
         this.handleExpand = this.handleExpand.bind(this);
@@ -29,6 +32,9 @@ class Card extends React.Component {
     componentDidMount() {
         this.setPosition();
         window.addEventListener('resize', this.setPosition);
+        if(this.props.active) {
+            this.handleExpand();
+        }
     }
 
     componentWillUnmount() {
@@ -55,6 +61,8 @@ class Card extends React.Component {
     }
 
     handleExpand() {
+        this.props.activeFunction(this.props.id);
+
         if (!this.state.expand) {
             var getScreenTop = jQuery(window).scrollTop();
             this.setState(
@@ -67,6 +75,8 @@ class Card extends React.Component {
     }
 
     handleContract() {
+        this.props.activeFunction(-1);
+
         if (this.state.expand) {
             var getScreenTop = this.state.screenTop;
             jQuery("html, body").animate({scrollTop: getScreenTop}, "slow");
@@ -81,7 +91,7 @@ class Card extends React.Component {
     render() {
 
         var titlePadding = (this.props.height < this.props.heroImagePadding || this.props.hideContent)
-            ? {paddingTop: '10px'}
+            ? {paddingTop: '0px'}
             : {paddingTop: this.props.heroImagePadding};
         var cardHolderStyle = {
             height: this.props.height,
@@ -129,17 +139,12 @@ class Card extends React.Component {
                     className={classes}
                     onClick={this.handleExpand}>
                     <div
-                        className={"card-content"}>
-                        <div
-                            className="card-background-image"
-                            style={{
+                        className={"card-content"}
+                        style={{
                                 backgroundImage: heroImage,
                                 backgroundRepeat: "no-repeat",
                                 backgroundSize: this.props.backgroundSize,
                                 backgroundColor: this.props.backgroundColor}}>
-
-                        </div>
-
                         <div
                             className={"main-card " + hoverHelper}
                             style={{paddingTop: this.props.heroImagePadding}}>
