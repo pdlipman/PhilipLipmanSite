@@ -1,3 +1,5 @@
+<div class="page-content">
+
 ## Philip Lipman 
 <a class="resume-link" href="./app/assets/content/PhilipLipmanResume.pdf"><i class="fa fa-file-pdf-o fa-hover-helper fa-resume"></i><span class="resume-link-text">PDF</span></a> <br/>
 pdlipman@yahoo.com<br/>
@@ -36,3 +38,4 @@ notifications.
 #### Education
 ###### Bachelor of Science (B.S.), Software Engineering
 Vermont Technical College - Randolph, VT
+</div>
