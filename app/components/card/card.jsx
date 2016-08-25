@@ -32,7 +32,7 @@ class Card extends React.Component {
     componentDidMount() {
         this.setPosition();
         window.addEventListener('resize', this.setPosition);
-        if(this.props.active) {
+        if (this.props.active) {
             this.handleExpand();
         }
     }
@@ -129,6 +129,17 @@ class Card extends React.Component {
             closeStyle = {};
         }
 
+        var cardTitle = '';
+        if (this.props.title) {
+            cardTitle = (
+                <div>
+                    <h3>
+                        {this.props.title}
+                    </h3>
+                </div>
+            );
+        }
+
         return (
             <div
                 style={cardHolderStyle}
@@ -151,11 +162,7 @@ class Card extends React.Component {
                             <div
                                 className={"cover-heading " + hoverHelper}
                                 style={titlePadding}>
-                                <div>
-                                    <h3>
-                                        {this.props.title}
-                                    </h3>
-                                </div>
+                                {cardTitle}
                             </div>
                             <div className={contentHideClass}
                                  style={{backgroundColor: this.props.backgroundColor}}>

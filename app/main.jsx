@@ -20,6 +20,8 @@ var MarkdownPage = require('./components/markdownpage/MarkdownPage.jsx');
 var resumeMarkdown = './app/assets/content/resume.md';
 var reactCardMarkdown = './app/assets/content/react-cards.md';
 
+var ComicBook = require('./components/comic/ComicBook.jsx');
+
 global.jQuery = require('jquery');
 
 class App extends React.Component {
@@ -69,15 +71,17 @@ class ReactCardsPage extends React.Component {
     }
 }
 
-var Game = new React.createClass({
-    render: function () {
+class ComicBookPage extends React.Component {
+    render() {
         return (
-            <GameMain>
-            </GameMain>
-
+            <div className="container">
+                TEST
+                <ComicBook></ComicBook>
+            </div>
         );
     }
-});
+}
+
 
 var wrapComponent = function(Component, props) {
     console.log(props);
@@ -94,6 +98,7 @@ ReactDOM.render((
             <IndexRoute component={wrapComponent(Deck, {items: cardContent})}/>
             <Route path="resume" component={ResumePage}/>
             <Route path="react-cards" component={ReactCardsPage}/>
+            <Route path="comic-book" component={ComicBookPage}/>
             <Route path="*" component={Deck}/>
         </Route>
     </Router>

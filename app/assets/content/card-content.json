@@ -32,7 +32,6 @@
   },
   {
     "key": 4,
-    "title": "Preview Gallery",
     "content": "./app/assets/content/preview-gallery.md",
     "heroImage": "url(./app/assets/octopus.jpg)",
     "columnClass": "col-lg-3",

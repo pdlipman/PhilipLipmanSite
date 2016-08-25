@@ -1,23 +1,19 @@
-<div class="page-content">
-
 ## Philip Lipman 
 <a class="resume-link" href="./app/assets/content/PhilipLipmanResume.pdf"><i class="fa fa-file-pdf-o fa-hover-helper fa-resume"></i><span class="resume-link-text">PDF</span></a> <br/>
 pdlipman@yahoo.com<br/>
 802.558.2844<br/>
-http://pdlipman.github.io<br/>
+<a class="resume-link resume-link-2" href="http://pdlipman.github.io"><span class="resume-link-text">http://pdlipman.github.io</span></a><br/>
 
 #### Skills
-- Java, Javascript, MySql
-- React, Spring, Camel, jQuery, CSS, Sass, HTML, JSON, MongoDB, Solr, XML 
-- IntelliJ, Maven, Tomcat, Git
-- Web Application Development, Data Management, Messaging, Batch Processing
-- Agile, Scrum
+- Java, Javascript
+- React, Spring, Camel 
+- Web Application Development
 #### Work Experience
 ##### Software Developer
 ###### <a class="resume-link resume-link-2" href="http://www.dealer.com/"><span class="resume-link-text">Dealer.com</span></a>, June 2014 - present
 - Developed monitoring tools that allows web developers to quickly 
 monitor inventory across all development and production environments, ensuring 
-accurate data when testing changes.
+accurate data when testing changes. Application uses Spring Boot for the REST services, and React JS for the presentation.
 - Developed batch service to retrieve and process payment and leasing financial
 data across all car dealership inventory, allowing customers to
 estimate accurate payments and driving loan qualification.
@@ -40,4 +36,3 @@ notifications.
 #### Education
 ###### Bachelor of Science (B.S.), Software Engineering
 Vermont Technical College - Randolph, VT
-</div>
